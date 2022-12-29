@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;   
+}
+
+ul{
+    list-style: none;
+}
+
+nav{
+    width: 70%;
+    background-color: purple;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    outline: 1px solid ;
+    
+
+}
+nav ul{
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    
+}
+
+nav ul li a{
+    color: aliceblue;
+    padding: 15px 30px;
+    display: block;
+    font-weight: 500;
+    position: relative;
+   z-index: 1;
+}
+nav ul li:hover > a{
+    background-color: aliceblue;
+    color: purple;
+    
+}
+
+nav ul li a::before{
+    content: "" ;
+    width: 0;
+    height: 0;
+    background-color: aliceblue;
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+    transition: .3s;
+    
+}
+
+nav ul li a::after{
+    content: "";
+    width: 0;
+    height:0;
+    background-color: aliceblue;
+    position: absolute;
+    right:50%;
+    z-index: -1;
+    transition: .3s;
+
+
+}
+
+nav ul li:hover > a::before{
+    width: 50%;
+    height: 70%;
+  
+   right: 0;
+   
+}
+
+nav ul li:hover > a::after {
+width: 50%;
+height: 70%;
+
+left: 0;
+}
+/* sub menu */
+
+nav ul li ul {
+    border-top: 1px solid white;
+    position: absolute;
+    padding-top: 10px 0;
+    background-color:white;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    margin-top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    
+   
+
+}
+nav ul li ul li a{
+    color: purple;
+
+}
+
+
+
+nav ul li:hover > ul{
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+    
+    
+}
+
+nav ul li ul li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    
+}
+
+
+nav ul li ul li:last-child{
+    border: none;
+    
+}
+
+nav ul li ul li ul {
+    left: 100%;
+    top: 0;
+    width: 200px;
+    
+}
+
+
+
+
+
+
+
+
+
+
